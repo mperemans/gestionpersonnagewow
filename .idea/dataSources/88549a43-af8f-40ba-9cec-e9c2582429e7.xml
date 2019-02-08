@@ -1,0 +1,1855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="gestionPersoWow@localhost">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.14">
+    <root id="1">
+      <ServerVersion>11.1</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="dbfortest">
+      <ObjectId>16621</ObjectId>
+      <Comment>pour tout les test de sql manipulation</Comment>
+      <StateNumber>737</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="3" parent="1" name="gestionPersoWow">
+      <ObjectId>16390</ObjectId>
+      <StateNumber>590</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>980</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="4" parent="1" name="postgres">
+      <ObjectId>12365</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <StateNumber>566</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <role id="5" parent="1" name="manu">
+      <ObjectId>16428</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="6" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="7" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="pg_read_server_files">
+      <ObjectId>4569</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="14" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="15" parent="3" name="information_schema">
+      <ObjectId>12070</ObjectId>
+      <StateNumber>365</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="16" parent="3" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <StateNumber>358</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="17" parent="3" name="pg_temp_1">
+      <ObjectId>11804</ObjectId>
+      <StateNumber>121</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="18" parent="3" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <StateNumber>1</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="19" parent="3" name="pg_toast_temp_1">
+      <ObjectId>11805</ObjectId>
+      <StateNumber>121</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="20" parent="3" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <StateNumber>359</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>981</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="21" parent="3" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="22" parent="3" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="23" parent="3" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="24" parent="3" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="25" parent="3" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="26" parent="3" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <extension id="27" parent="3" name="plpgsql">
+      <ObjectId>12351</ObjectId>
+      <Comment>PL/pgSQL procedural language</Comment>
+      <StateNumber>518</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <extension id="28" parent="3" name="uuid-ossp">
+      <ObjectId>16453</ObjectId>
+      <Comment>generate universally unique identifiers (UUIDs)</Comment>
+      <StateNumber>667</StateNumber>
+      <Version>1.1</Version>
+      <SchemaName>public</SchemaName>
+      <SchemaId>2200</SchemaId>
+    </extension>
+    <table id="29" parent="20" name="wow_audit_classe">
+      <ObjectId>16769</ObjectId>
+      <Comment>permet de voir le suivi de la table wow_classe</Comment>
+      <Owner>manu</Owner>
+      <StateNumber>894</StateNumber>
+    </table>
+    <table id="30" parent="20" name="wow_audit_personnage">
+      <ObjectId>16975</ObjectId>
+      <Comment>Permet de voir le suivi de la table wow_personnage</Comment>
+      <Owner>manu</Owner>
+      <StateNumber>942</StateNumber>
+    </table>
+    <table id="31" parent="20" name="wow_audit_profession">
+      <ObjectId>16676</ObjectId>
+      <Comment>permet de voir le suivi de la table wow_profession</Comment>
+      <Owner>manu</Owner>
+      <StateNumber>852</StateNumber>
+    </table>
+    <table id="32" parent="20" name="wow_audit_race">
+      <ObjectId>16761</ObjectId>
+      <Comment>permet de voir le suivi de la table wow_race</Comment>
+      <Owner>manu</Owner>
+      <StateNumber>892</StateNumber>
+    </table>
+    <table id="33" parent="20" name="wow_audit_server">
+      <ObjectId>16650</ObjectId>
+      <Comment>permet de voir le suivi de la table wow_server</Comment>
+      <Owner>manu</Owner>
+      <StateNumber>774</StateNumber>
+    </table>
+    <table id="34" parent="20" name="wow_audit_typepersonnage">
+      <ObjectId>17018</ObjectId>
+      <Comment>Permet de voir le suivi de la table wow_type_personnage</Comment>
+      <Owner>manu</Owner>
+      <StateNumber>971</StateNumber>
+    </table>
+    <table id="35" parent="20" name="wow_audit_typeprofession">
+      <ObjectId>16658</ObjectId>
+      <Comment>permet de voir le suivi de la table wow_type_profession</Comment>
+      <Owner>manu</Owner>
+      <StateNumber>776</StateNumber>
+    </table>
+    <table id="36" parent="20" name="wow_audit_typerace">
+      <ObjectId>16734</ObjectId>
+      <Comment>permet de voir le suivi de la table wow_typerace</Comment>
+      <Owner>manu</Owner>
+      <StateNumber>889</StateNumber>
+    </table>
+    <table id="37" parent="20" name="wow_classe">
+      <ObjectId>16777</ObjectId>
+      <Comment>Table de la classe du personnage</Comment>
+      <Owner>manu</Owner>
+      <StateNumber>895</StateNumber>
+    </table>
+    <table id="38" parent="20" name="wow_personnage">
+      <ObjectId>16945</ObjectId>
+      <Comment>Table gerant les personnage </Comment>
+      <Owner>manu</Owner>
+      <StateNumber>935</StateNumber>
+    </table>
+    <table id="39" parent="20" name="wow_profession">
+      <ObjectId>16685</ObjectId>
+      <Comment>table des professions dans world of warcraft</Comment>
+      <Owner>manu</Owner>
+      <StateNumber>843</StateNumber>
+    </table>
+    <table id="40" parent="20" name="wow_race">
+      <ObjectId>16747</ObjectId>
+      <Comment>Table des races de personnage dans world of warcraft</Comment>
+      <Owner>manu</Owner>
+      <StateNumber>888</StateNumber>
+    </table>
+    <table id="41" parent="20" name="wow_server">
+      <ObjectId>16503</ObjectId>
+      <Comment>serveur de world of warcraft</Comment>
+      <Owner>manu</Owner>
+      <StateNumber>752</StateNumber>
+    </table>
+    <table id="42" parent="20" name="wow_type_personnage">
+      <ObjectId>16985</ObjectId>
+      <Comment>Table permettant de savoir qu elle race a droit a qu elle classe</Comment>
+      <Owner>manu</Owner>
+      <StateNumber>967</StateNumber>
+    </table>
+    <table id="43" parent="20" name="wow_type_profession">
+      <ObjectId>16527</ObjectId>
+      <Comment>type de profession</Comment>
+      <Owner>manu</Owner>
+      <StateNumber>735</StateNumber>
+    </table>
+    <table id="44" parent="20" name="wow_type_race">
+      <ObjectId>16725</ObjectId>
+      <Comment>table de type de race de personnage</Comment>
+      <Owner>manu</Owner>
+      <StateNumber>885</StateNumber>
+    </table>
+    <routine id="45" parent="20" name="audit_classe">
+      <ObjectId>16733</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>718</SourceTextLength>
+      <StateNumber>877</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="46" parent="20" name="audit_personnage">
+      <ObjectId>16717</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>730</SourceTextLength>
+      <StateNumber>871</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="47" parent="20" name="audit_profession">
+      <ObjectId>16683</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>716</SourceTextLength>
+      <StateNumber>803</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="48" parent="20" name="audit_race">
+      <ObjectId>16732</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>712</SourceTextLength>
+      <StateNumber>876</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="49" parent="20" name="audit_server">
+      <ObjectId>16654</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>704</SourceTextLength>
+      <StateNumber>765</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="50" parent="20" name="audit_typepersonnage">
+      <ObjectId>17026</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>742</SourceTextLength>
+      <StateNumber>972</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="51" parent="20" name="audit_typeprofession">
+      <ObjectId>16664</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>742</SourceTextLength>
+      <StateNumber>764</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="52" parent="20" name="audit_typerace">
+      <ObjectId>16731</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>724</SourceTextLength>
+      <StateNumber>875</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="53" parent="20" name="func_checktypeprofession_isdelete">
+      <ObjectId>16620</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>60</SourceTextLength>
+      <StateNumber>736</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>idtype uuid</ArgumentsDefinition>
+      <ResultsDefinition>boolean</ResultsDefinition>
+      <LanguageName>sql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="54" parent="20" name="sex_personnage">
+      <ObjectId>16861</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>536</SourceTextLength>
+      <StateNumber>919</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="55" parent="20" name="uuid_generate_v1">
+      <ObjectId>16459</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>667</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <LanguageName>c</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ConcurrencyKind>safe</ConcurrencyKind>
+      <Strict>1</Strict>
+      <Cost>1.0</Cost>
+    </routine>
+    <routine id="56" parent="20" name="uuid_generate_v1mc">
+      <ObjectId>16460</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>667</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <LanguageName>c</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ConcurrencyKind>safe</ConcurrencyKind>
+      <Strict>1</Strict>
+      <Cost>1.0</Cost>
+    </routine>
+    <routine id="57" parent="20" name="uuid_generate_v3">
+      <ObjectId>16461</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>667</StateNumber>
+      <VolatilityKind>immutable</VolatilityKind>
+      <LanguageName>c</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ConcurrencyKind>safe</ConcurrencyKind>
+      <Strict>1</Strict>
+      <Cost>1.0</Cost>
+    </routine>
+    <routine id="58" parent="20" name="uuid_generate_v4">
+      <ObjectId>16462</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>667</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <LanguageName>c</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ConcurrencyKind>safe</ConcurrencyKind>
+      <Strict>1</Strict>
+      <Cost>1.0</Cost>
+    </routine>
+    <routine id="59" parent="20" name="uuid_generate_v5">
+      <ObjectId>16463</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>667</StateNumber>
+      <VolatilityKind>immutable</VolatilityKind>
+      <LanguageName>c</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ConcurrencyKind>safe</ConcurrencyKind>
+      <Strict>1</Strict>
+      <Cost>1.0</Cost>
+    </routine>
+    <routine id="60" parent="20" name="uuid_nil">
+      <ObjectId>16454</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>667</StateNumber>
+      <VolatilityKind>immutable</VolatilityKind>
+      <LanguageName>c</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ConcurrencyKind>safe</ConcurrencyKind>
+      <Strict>1</Strict>
+      <Cost>1.0</Cost>
+    </routine>
+    <routine id="61" parent="20" name="uuid_ns_dns">
+      <ObjectId>16455</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>667</StateNumber>
+      <VolatilityKind>immutable</VolatilityKind>
+      <LanguageName>c</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ConcurrencyKind>safe</ConcurrencyKind>
+      <Strict>1</Strict>
+      <Cost>1.0</Cost>
+    </routine>
+    <routine id="62" parent="20" name="uuid_ns_oid">
+      <ObjectId>16457</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>667</StateNumber>
+      <VolatilityKind>immutable</VolatilityKind>
+      <LanguageName>c</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ConcurrencyKind>safe</ConcurrencyKind>
+      <Strict>1</Strict>
+      <Cost>1.0</Cost>
+    </routine>
+    <routine id="63" parent="20" name="uuid_ns_url">
+      <ObjectId>16456</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>667</StateNumber>
+      <VolatilityKind>immutable</VolatilityKind>
+      <LanguageName>c</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ConcurrencyKind>safe</ConcurrencyKind>
+      <Strict>1</Strict>
+      <Cost>1.0</Cost>
+    </routine>
+    <routine id="64" parent="20" name="uuid_ns_x500">
+      <ObjectId>16458</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>667</StateNumber>
+      <VolatilityKind>immutable</VolatilityKind>
+      <LanguageName>c</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ConcurrencyKind>safe</ConcurrencyKind>
+      <Strict>1</Strict>
+      <Cost>1.0</Cost>
+    </routine>
+    <column id="65" parent="29" name="id">
+      <Position>1</Position>
+      <Comment>identifiant de la table</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>894</StateNumber>
+      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="66" parent="29" name="operation">
+      <Position>2</Position>
+      <Comment>type d&apos;operation</Comment>
+      <DataType>char|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>894</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="67" parent="29" name="date_event">
+      <Position>3</Position>
+      <Comment>date de l&apos;operation executer</Comment>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>894</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="68" parent="29" name="id_user">
+      <Position>4</Position>
+      <Comment>identifiant de l&apos;utilisateur qui a executer l operation</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>894</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="69" parent="29" name="id_classe">
+      <Position>5</Position>
+      <Comment>identifiant de la classe</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>894</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="70" parent="29" name="name">
+      <Position>6</Position>
+      <Comment>nom de la classe</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>894</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="71" parent="29" name="wow_audit_classe_pkey">
+      <ObjectId>16773</ObjectId>
+      <StateNumber>894</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="72" parent="29" name="wow_audit_classe_pkey">
+      <ObjectId>16774</ObjectId>
+      <StateNumber>894</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>wow_audit_classe_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <rule id="73" parent="29" name="auditclasse_upd_protect">
+      <ObjectId>16776</ObjectId>
+      <StateNumber>894</StateNumber>
+      <Turn>instead-of</Turn>
+      <Events>U</Events>
+      <FireMode>origin</FireMode>
+      <SourceTextLength>99</SourceTextLength>
+    </rule>
+    <rule id="74" parent="29" name="auditclasse_del_protect">
+      <ObjectId>16775</ObjectId>
+      <StateNumber>894</StateNumber>
+      <Turn>instead-of</Turn>
+      <Events>D</Events>
+      <FireMode>origin</FireMode>
+      <SourceTextLength>99</SourceTextLength>
+    </rule>
+    <column id="75" parent="30" name="id">
+      <Position>1</Position>
+      <Comment>identifiant de la table</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>939</StateNumber>
+      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="76" parent="30" name="operation">
+      <Position>2</Position>
+      <Comment>type d operation</Comment>
+      <DataType>char|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>939</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="77" parent="30" name="date_event">
+      <Position>3</Position>
+      <Comment>date de l operation executer</Comment>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>939</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="78" parent="30" name="id_user">
+      <Position>4</Position>
+      <Comment>identifiant de l utilisateur</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>939</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="79" parent="30" name="id_personnage">
+      <Position>5</Position>
+      <Comment>identifiant du personnage</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>939</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="80" parent="30" name="name">
+      <Position>6</Position>
+      <Comment>nom du personnage</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>939</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="81" parent="30" name="sex">
+      <Position>7</Position>
+      <Comment>sexe du personnage</Comment>
+      <DataType>char|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>943</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="82" parent="30" name="id_type_personnage">
+      <Position>8</Position>
+      <Comment>identifiant du type du personnage race et classe</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>969</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="83" parent="30" name="level">
+      <Position>10</Position>
+      <Comment>niveau du personnage</Comment>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>939</StateNumber>
+      <DefaultExpression>1</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="84" parent="30" name="armorlevel">
+      <Position>11</Position>
+      <Comment>niveau d armure du personnage</Comment>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>939</StateNumber>
+      <DefaultExpression>1</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="85" parent="30" name="id_server">
+      <Position>12</Position>
+      <Comment>identifiant du serveur du personnage</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>939</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <index id="86" parent="30" name="wow_audit_personnage_pkey">
+      <ObjectId>16981</ObjectId>
+      <StateNumber>939</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="87" parent="30" name="wow_audit_personnage_pkey">
+      <ObjectId>16982</ObjectId>
+      <StateNumber>939</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>wow_audit_personnage_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <rule id="88" parent="30" name="auditpersonnage_upd_protect">
+      <ObjectId>16984</ObjectId>
+      <StateNumber>942</StateNumber>
+      <Turn>instead-of</Turn>
+      <Events>U</Events>
+      <FireMode>origin</FireMode>
+      <SourceTextLength>107</SourceTextLength>
+    </rule>
+    <rule id="89" parent="30" name="auditpersonnage_del_protect">
+      <ObjectId>16983</ObjectId>
+      <StateNumber>966</StateNumber>
+      <Turn>instead-of</Turn>
+      <Events>D</Events>
+      <FireMode>origin</FireMode>
+      <SourceTextLength>107</SourceTextLength>
+    </rule>
+    <column id="90" parent="31" name="id">
+      <Position>1</Position>
+      <Comment>identifiant de la table</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>800</StateNumber>
+      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="91" parent="31" name="operation">
+      <Position>2</Position>
+      <Comment>type d&apos;operation</Comment>
+      <DataType>char|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>800</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="92" parent="31" name="date_event">
+      <Position>3</Position>
+      <Comment>date de l&apos;operation executer</Comment>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>800</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="93" parent="31" name="id_user">
+      <Position>4</Position>
+      <Comment>identifiant de l&apos;utilisateur qui a executer l operation</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>800</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="94" parent="31" name="id_profession">
+      <Position>5</Position>
+      <Comment>identifiant de la profession wow</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>800</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="95" parent="31" name="name">
+      <Position>6</Position>
+      <Comment>nom de la profession wow</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>800</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="96" parent="31" name="id_typeprofession">
+      <Position>7</Position>
+      <Comment>identifiant du type de profession</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>852</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <index id="97" parent="31" name="wow_audit_profession_pkey">
+      <ObjectId>16680</ObjectId>
+      <StateNumber>800</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="98" parent="31" name="wow_audit_profession_pkey">
+      <ObjectId>16681</ObjectId>
+      <StateNumber>800</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>wow_audit_profession_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <rule id="99" parent="31" name="auditprofession_upd_protect">
+      <ObjectId>16696</ObjectId>
+      <StateNumber>838</StateNumber>
+      <Turn>instead-of</Turn>
+      <Events>U</Events>
+      <FireMode>origin</FireMode>
+      <SourceTextLength>107</SourceTextLength>
+    </rule>
+    <rule id="100" parent="31" name="auditprofession_del_protect">
+      <ObjectId>16695</ObjectId>
+      <StateNumber>850</StateNumber>
+      <Turn>instead-of</Turn>
+      <Events>D</Events>
+      <FireMode>origin</FireMode>
+      <SourceTextLength>107</SourceTextLength>
+    </rule>
+    <column id="101" parent="32" name="id">
+      <Position>1</Position>
+      <Comment>identifiant de la table</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>892</StateNumber>
+      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="102" parent="32" name="operation">
+      <Position>2</Position>
+      <Comment>type d&apos;operation</Comment>
+      <DataType>char|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>892</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="103" parent="32" name="date_event">
+      <Position>3</Position>
+      <Comment>date de l&apos;operation executer</Comment>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>892</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="104" parent="32" name="id_user">
+      <Position>4</Position>
+      <Comment>identifiant de l&apos;utilisateur qui a executer l operation</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>892</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="105" parent="32" name="id_race">
+      <Position>5</Position>
+      <Comment>identifiant de la race</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>892</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="106" parent="32" name="name">
+      <Position>6</Position>
+      <Comment>nom de la race</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>892</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="107" parent="32" name="id_typerace">
+      <Position>7</Position>
+      <Comment>identifiant du type de race</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>892</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <index id="108" parent="32" name="wow_audit_race_pkey">
+      <ObjectId>16765</ObjectId>
+      <StateNumber>892</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="109" parent="32" name="wow_audit_race_pkey">
+      <ObjectId>16766</ObjectId>
+      <StateNumber>892</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>wow_audit_race_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <rule id="110" parent="32" name="auditrace_upd_protect">
+      <ObjectId>16768</ObjectId>
+      <StateNumber>892</StateNumber>
+      <Turn>instead-of</Turn>
+      <Events>U</Events>
+      <FireMode>origin</FireMode>
+      <SourceTextLength>95</SourceTextLength>
+    </rule>
+    <rule id="111" parent="32" name="auditrace_del_protect">
+      <ObjectId>16767</ObjectId>
+      <StateNumber>892</StateNumber>
+      <Turn>instead-of</Turn>
+      <Events>D</Events>
+      <FireMode>origin</FireMode>
+      <SourceTextLength>95</SourceTextLength>
+    </rule>
+    <column id="112" parent="33" name="id">
+      <Position>1</Position>
+      <Comment>identifiant de la table</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>749</StateNumber>
+      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="113" parent="33" name="operation">
+      <Position>2</Position>
+      <Comment>type d&apos;operation</Comment>
+      <DataType>char|0s</DataType>
+      <StateNumber>759</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="114" parent="33" name="date_event">
+      <Position>3</Position>
+      <Comment>date de l&apos;operation executer</Comment>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>749</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="115" parent="33" name="id_user">
+      <Position>4</Position>
+      <Comment>identifiant de l&apos;utilisateur qui a executer l operation</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>759</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="116" parent="33" name="id_server">
+      <Position>5</Position>
+      <Comment>identifiant du serveur wow</Comment>
+      <DataType>uuid|0s</DataType>
+      <StateNumber>749</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="117" parent="33" name="name">
+      <Position>6</Position>
+      <Comment>nom du serveur wow</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>759</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="118" parent="33" name="region">
+      <Position>7</Position>
+      <Comment>region du serveur wow</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>759</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="119" parent="33" name="wow_audit_server_pkey">
+      <ObjectId>16656</ObjectId>
+      <StateNumber>760</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="120" parent="33" name="wow_audit_server_pkey">
+      <ObjectId>16657</ObjectId>
+      <StateNumber>760</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>wow_audit_server_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <rule id="121" parent="33" name="auditserver_upd_protect">
+      <ObjectId>16703</ObjectId>
+      <StateNumber>855</StateNumber>
+      <Turn>instead-of</Turn>
+      <Events>U</Events>
+      <FireMode>origin</FireMode>
+      <SourceTextLength>99</SourceTextLength>
+    </rule>
+    <rule id="122" parent="33" name="auditserver_del_protect">
+      <ObjectId>16666</ObjectId>
+      <StateNumber>796</StateNumber>
+      <Turn>instead-of</Turn>
+      <Events>D</Events>
+      <FireMode>origin</FireMode>
+      <SourceTextLength>99</SourceTextLength>
+    </rule>
+    <column id="123" parent="34" name="id">
+      <Position>1</Position>
+      <Comment>identifiant de la table</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>971</StateNumber>
+      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="124" parent="34" name="operation">
+      <Position>2</Position>
+      <Comment>type d operation</Comment>
+      <DataType>char|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>971</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="125" parent="34" name="date_event">
+      <Position>3</Position>
+      <Comment>date de l operation executer</Comment>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>971</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="126" parent="34" name="id_user">
+      <Position>4</Position>
+      <Comment>identifiant de l utilisateur</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>971</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="127" parent="34" name="id_type_personnage">
+      <Position>5</Position>
+      <Comment>identifiant du type du personnage race et classe</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>971</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="128" parent="34" name="id_race">
+      <Position>6</Position>
+      <Comment>race du personnage</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>971</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="129" parent="34" name="id_classe">
+      <Position>7</Position>
+      <Comment>classe du personnage</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>971</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <index id="130" parent="34" name="wow_audit_typepersonnage_pkey">
+      <ObjectId>17022</ObjectId>
+      <StateNumber>971</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="131" parent="34" name="wow_audit_typepersonnage_pkey">
+      <ObjectId>17023</ObjectId>
+      <StateNumber>971</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>wow_audit_typepersonnage_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <rule id="132" parent="34" name="audittypepersonnage_upd_protect">
+      <ObjectId>17025</ObjectId>
+      <StateNumber>971</StateNumber>
+      <Turn>instead-of</Turn>
+      <Events>U</Events>
+      <FireMode>origin</FireMode>
+      <SourceTextLength>115</SourceTextLength>
+    </rule>
+    <rule id="133" parent="34" name="audittypepersonnage_del_protect">
+      <ObjectId>17024</ObjectId>
+      <StateNumber>971</StateNumber>
+      <Turn>instead-of</Turn>
+      <Events>D</Events>
+      <FireMode>origin</FireMode>
+      <SourceTextLength>115</SourceTextLength>
+    </rule>
+    <column id="134" parent="35" name="id">
+      <Position>1</Position>
+      <Comment>identifiant de la table</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>761</StateNumber>
+      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="135" parent="35" name="operation">
+      <Position>2</Position>
+      <Comment>type d&apos;operation</Comment>
+      <DataType>char|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>761</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="136" parent="35" name="date_event">
+      <Position>3</Position>
+      <Comment>date de l&apos;operation executer</Comment>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>761</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="137" parent="35" name="id_user">
+      <Position>4</Position>
+      <Comment>identifiant de l&apos;utilisateur qui a executer l operation</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>761</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="138" parent="35" name="id_typeprofession">
+      <Position>5</Position>
+      <Comment>identifiant du type de profession wow</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>761</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="139" parent="35" name="name">
+      <Position>6</Position>
+      <Comment>nom du type de profession</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>761</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="140" parent="35" name="pk_identifiant">
+      <ObjectId>16662</ObjectId>
+      <StateNumber>761</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="141" parent="35" name="pk_identifiant">
+      <ObjectId>16663</ObjectId>
+      <StateNumber>761</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_identifiant</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <rule id="142" parent="35" name="audittypeprofession_upd_protect">
+      <ObjectId>16702</ObjectId>
+      <StateNumber>854</StateNumber>
+      <Turn>instead-of</Turn>
+      <Events>U</Events>
+      <FireMode>origin</FireMode>
+      <SourceTextLength>115</SourceTextLength>
+    </rule>
+    <rule id="143" parent="35" name="audittypeprofession_del_protect">
+      <ObjectId>16667</ObjectId>
+      <StateNumber>851</StateNumber>
+      <Turn>instead-of</Turn>
+      <Events>D</Events>
+      <FireMode>origin</FireMode>
+      <SourceTextLength>115</SourceTextLength>
+    </rule>
+    <column id="144" parent="36" name="id">
+      <Position>1</Position>
+      <Comment>identifiant de la table</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>878</StateNumber>
+      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="145" parent="36" name="operation">
+      <Position>2</Position>
+      <Comment>type d operation</Comment>
+      <DataType>char|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>878</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="146" parent="36" name="date_event">
+      <Position>3</Position>
+      <Comment>date de l operation executer</Comment>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>878</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="147" parent="36" name="id_user">
+      <Position>4</Position>
+      <Comment>identifiant de l utilisateur</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>878</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="148" parent="36" name="id_typerace">
+      <Position>5</Position>
+      <Comment>identifiant du type de race</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>878</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="149" parent="36" name="name">
+      <Position>6</Position>
+      <Comment>nom du type de race</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>878</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="150" parent="36" name="wow_audit_typerace_pkey">
+      <ObjectId>16738</ObjectId>
+      <StateNumber>889</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="151" parent="36" name="wow_audit_typerace_pkey">
+      <ObjectId>16739</ObjectId>
+      <StateNumber>878</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>wow_audit_typerace_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <rule id="152" parent="36" name="audittyperace_upd_protect">
+      <ObjectId>16742</ObjectId>
+      <StateNumber>883</StateNumber>
+      <Turn>instead-of</Turn>
+      <Events>U</Events>
+      <FireMode>origin</FireMode>
+      <SourceTextLength>103</SourceTextLength>
+    </rule>
+    <rule id="153" parent="36" name="audittyperace_del_protect">
+      <ObjectId>16743</ObjectId>
+      <StateNumber>884</StateNumber>
+      <Turn>instead-of</Turn>
+      <Events>D</Events>
+      <FireMode>origin</FireMode>
+      <SourceTextLength>103</SourceTextLength>
+    </rule>
+    <column id="154" parent="37" name="uuid">
+      <Position>1</Position>
+      <Comment>identifiant de la classe</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>895</StateNumber>
+      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="155" parent="37" name="name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>895</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="156" parent="37" name="wow_classe_pkey">
+      <ObjectId>16781</ObjectId>
+      <StateNumber>895</StateNumber>
+      <ColNames>uuid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="157" parent="37" name="uk_classe_name">
+      <ObjectId>16783</ObjectId>
+      <StateNumber>895</StateNumber>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="158" parent="37" name="wow_classe_pkey">
+      <ObjectId>16782</ObjectId>
+      <StateNumber>895</StateNumber>
+      <ColNames>uuid</ColNames>
+      <UnderlyingIndexName>wow_classe_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="159" parent="37" name="uk_classe_name">
+      <ObjectId>16784</ObjectId>
+      <Comment>controle l unicite du nom pour les classe</Comment>
+      <StateNumber>895</StateNumber>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>uk_classe_name</UnderlyingIndexName>
+    </key>
+    <trigger id="160" parent="37" name="classe_audit">
+      <ObjectId>16785</ObjectId>
+      <StateNumber>895</StateNumber>
+      <Turn>after-row</Turn>
+      <Events>IUD</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16733</CallRoutineId>
+    </trigger>
+    <column id="161" parent="38" name="uuid">
+      <Position>1</Position>
+      <Comment>Identifiant du personnage</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>935</StateNumber>
+      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="162" parent="38" name="name">
+      <Position>2</Position>
+      <Comment>nom du personnage</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>935</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="163" parent="38" name="sex">
+      <Position>3</Position>
+      <Comment>sexe du personnage</Comment>
+      <DataType>char|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>935</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="164" parent="38" name="id_type">
+      <Position>5</Position>
+      <Comment>identifiant du type de personnage race et classe</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>960</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="165" parent="38" name="level">
+      <Position>6</Position>
+      <Comment>niveau du personnage</Comment>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>935</StateNumber>
+      <DefaultExpression>1</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="166" parent="38" name="armorlevel">
+      <Position>7</Position>
+      <Comment>niveau d&apos;armure</Comment>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>935</StateNumber>
+      <DefaultExpression>1</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="167" parent="38" name="id_server">
+      <Position>8</Position>
+      <Comment>identifiant du server</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>935</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <index id="168" parent="38" name="wow_personnage_pkey">
+      <ObjectId>16954</ObjectId>
+      <StateNumber>935</StateNumber>
+      <ColNames>uuid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="169" parent="38" name="wow_personnage_name_id_server_key">
+      <ObjectId>16956</ObjectId>
+      <StateNumber>935</StateNumber>
+      <ColNames>name
+id_server</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="170" parent="38" name="wow_personnage_pkey">
+      <ObjectId>16955</ObjectId>
+      <StateNumber>935</StateNumber>
+      <ColNames>uuid</ColNames>
+      <UnderlyingIndexName>wow_personnage_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="171" parent="38" name="wow_personnage_name_id_server_key">
+      <ObjectId>16957</ObjectId>
+      <StateNumber>935</StateNumber>
+      <ColNames>name
+id_server</ColNames>
+      <UnderlyingIndexName>wow_personnage_name_id_server_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="172" parent="38" name="wow_personnage_id_type_fkey">
+      <ObjectId>17013</ObjectId>
+      <StateNumber>968</StateNumber>
+      <ColNames>id_type</ColNames>
+      <RefTableId>16985</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>wow_type_personnage</RefTableName>
+      <RefKeyName>wow_classe_race_pkey</RefKeyName>
+      <RefColNames>uuid</RefColNames>
+    </foreign-key>
+    <foreign-key id="173" parent="38" name="wow_personnage_id_server_fkey">
+      <ObjectId>16958</ObjectId>
+      <StateNumber>935</StateNumber>
+      <ColNames>id_server</ColNames>
+      <RefTableId>16503</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>wow_server</RefTableName>
+      <RefKeyName>wow_server_pk</RefKeyName>
+      <RefColNames>uuid</RefColNames>
+    </foreign-key>
+    <check id="174" parent="38" name="wow_personnage_sex_check">
+      <ObjectId>16953</ObjectId>
+      <StateNumber>935</StateNumber>
+      <ColNames>sex</ColNames>
+      <Predicate>(sex = &apos;M&apos;::bpchar) OR (sex = &apos;m&apos;::bpchar) OR (sex = &apos;F&apos;::bpchar) OR (sex = &apos;f&apos;::bpchar)</Predicate>
+    </check>
+    <check id="175" parent="38" name="wow_personnage_level_check">
+      <ObjectId>16951</ObjectId>
+      <StateNumber>935</StateNumber>
+      <ColNames>level</ColNames>
+      <Predicate>level &gt; 0</Predicate>
+    </check>
+    <check id="176" parent="38" name="wow_personnage_armorlevel_check">
+      <ObjectId>16952</ObjectId>
+      <StateNumber>935</StateNumber>
+      <ColNames>armorlevel</ColNames>
+      <Predicate>armorlevel &gt; 0</Predicate>
+    </check>
+    <trigger id="177" parent="38" name="personnage_audit">
+      <ObjectId>16973</ObjectId>
+      <StateNumber>966</StateNumber>
+      <Turn>after-row</Turn>
+      <Events>IUD</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16717</CallRoutineId>
+    </trigger>
+    <column id="178" parent="39" name="uuid">
+      <Position>1</Position>
+      <Comment>identifiant de la profession</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>807</StateNumber>
+      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="179" parent="39" name="name">
+      <Position>2</Position>
+      <Comment>nom de la profession</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>807</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="180" parent="39" name="id_typeprofession">
+      <Position>3</Position>
+      <Comment>identifiant du type de profession</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>843</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <index id="181" parent="39" name="pk_profession_uuid">
+      <ObjectId>16689</ObjectId>
+      <StateNumber>807</StateNumber>
+      <ColNames>uuid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="182" parent="39" name="uk_name_profession">
+      <ObjectId>16691</ObjectId>
+      <StateNumber>807</StateNumber>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="183" parent="39" name="pk_profession_uuid">
+      <ObjectId>16690</ObjectId>
+      <StateNumber>807</StateNumber>
+      <ColNames>uuid</ColNames>
+      <UnderlyingIndexName>pk_profession_uuid</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="184" parent="39" name="uk_name_profession">
+      <ObjectId>16692</ObjectId>
+      <Comment>unicite du nom</Comment>
+      <StateNumber>807</StateNumber>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>uk_name_profession</UnderlyingIndexName>
+    </key>
+    <foreign-key id="185" parent="39" name="fk_profession_typeprofession">
+      <ObjectId>16697</ObjectId>
+      <Comment>lien entre la table profession et type profession</Comment>
+      <StateNumber>845</StateNumber>
+      <ColNames>id_typeprofession</ColNames>
+      <RefTableId>16527</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>wow_type_profession</RefTableName>
+      <RefKeyName>pk_typeprofession_uuid</RefKeyName>
+      <RefColNames>uuid</RefColNames>
+    </foreign-key>
+    <trigger id="186" parent="39" name="profession_audit">
+      <ObjectId>16693</ObjectId>
+      <StateNumber>811</StateNumber>
+      <Turn>after-row</Turn>
+      <Events>IUD</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16683</CallRoutineId>
+    </trigger>
+    <column id="187" parent="40" name="uuid">
+      <Position>1</Position>
+      <Comment>identifiant de la table</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>888</StateNumber>
+      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="188" parent="40" name="name">
+      <Position>2</Position>
+      <Comment>nom de la race du personnage</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>888</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="189" parent="40" name="id_typerace">
+      <Position>3</Position>
+      <Comment>identifiant du type de race</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>888</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <index id="190" parent="40" name="wow_race_pkey">
+      <ObjectId>16751</ObjectId>
+      <StateNumber>888</StateNumber>
+      <ColNames>uuid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="191" parent="40" name="wow_race_name_key">
+      <ObjectId>16753</ObjectId>
+      <StateNumber>888</StateNumber>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="192" parent="40" name="wow_race_pkey">
+      <ObjectId>16752</ObjectId>
+      <StateNumber>888</StateNumber>
+      <ColNames>uuid</ColNames>
+      <UnderlyingIndexName>wow_race_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="193" parent="40" name="wow_race_name_key">
+      <ObjectId>16754</ObjectId>
+      <StateNumber>888</StateNumber>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>wow_race_name_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="194" parent="40" name="wow_race_id_typerace_fkey">
+      <ObjectId>16755</ObjectId>
+      <StateNumber>888</StateNumber>
+      <ColNames>id_typerace</ColNames>
+      <RefTableId>16725</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>wow_type_race</RefTableName>
+      <RefKeyName>wow_type_race_pkey</RefKeyName>
+      <RefColNames>uuid</RefColNames>
+    </foreign-key>
+    <trigger id="195" parent="40" name="race_audit">
+      <ObjectId>16760</ObjectId>
+      <StateNumber>891</StateNumber>
+      <Turn>before-row</Turn>
+      <Events>IUD</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16732</CallRoutineId>
+    </trigger>
+    <column id="196" parent="41" name="uuid">
+      <Position>1</Position>
+      <Comment>identifiant du serveur</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>724</StateNumber>
+      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="197" parent="41" name="name">
+      <Position>2</Position>
+      <Comment>nom du serveur</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>693</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="198" parent="41" name="region">
+      <Position>3</Position>
+      <Comment>region du serveur world of warcraft</Comment>
+      <DataType>char(3)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>694</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <index id="199" parent="41" name="wow_server_pk">
+      <ObjectId>16575</ObjectId>
+      <StateNumber>724</StateNumber>
+      <ColNames>uuid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="200" parent="41" name="uk_server_name">
+      <ObjectId>16510</ObjectId>
+      <StateNumber>724</StateNumber>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="201" parent="41" name="wow_server_pk">
+      <ObjectId>16576</ObjectId>
+      <StateNumber>724</StateNumber>
+      <ColNames>uuid</ColNames>
+      <UnderlyingIndexName>wow_server_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="202" parent="41" name="uk_server_name">
+      <ObjectId>16511</ObjectId>
+      <StateNumber>693</StateNumber>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>uk_server_name</UnderlyingIndexName>
+    </key>
+    <trigger id="203" parent="41" name="server_audit">
+      <ObjectId>16655</ObjectId>
+      <StateNumber>752</StateNumber>
+      <Turn>after-row</Turn>
+      <Events>IUD</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16654</CallRoutineId>
+    </trigger>
+    <column id="204" parent="42" name="uuid">
+      <Position>1</Position>
+      <Comment>identifiant</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>944</StateNumber>
+      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="205" parent="42" name="id_race">
+      <Position>2</Position>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>944</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="206" parent="42" name="id_classe">
+      <Position>3</Position>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>944</StateNumber>
+      <TypeId>2950</TypeId>
+    </column>
+    <index id="207" parent="42" name="wow_classe_race_pkey">
+      <ObjectId>16989</ObjectId>
+      <StateNumber>944</StateNumber>
+      <ColNames>uuid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="208" parent="42" name="wow_classe_race_id_race_id_classe_key">
+      <ObjectId>16991</ObjectId>
+      <StateNumber>944</StateNumber>
+      <ColNames>id_race
+id_classe</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="209" parent="42" name="wow_classe_race_pkey">
+      <ObjectId>16990</ObjectId>
+      <StateNumber>944</StateNumber>
+      <ColNames>uuid</ColNames>
+      <UnderlyingIndexName>wow_classe_race_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="210" parent="42" name="wow_classe_race_id_race_id_classe_key">
+      <ObjectId>16992</ObjectId>
+      <StateNumber>944</StateNumber>
+      <ColNames>id_race
+id_classe</ColNames>
+      <UnderlyingIndexName>wow_classe_race_id_race_id_classe_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="211" parent="42" name="wow_classe_race_id_race_fkey">
+      <ObjectId>16993</ObjectId>
+      <StateNumber>944</StateNumber>
+      <ColNames>id_race</ColNames>
+      <RefTableId>16747</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>wow_race</RefTableName>
+      <RefKeyName>wow_race_pkey</RefKeyName>
+      <RefColNames>uuid</RefColNames>
+    </foreign-key>
+    <foreign-key id="212" parent="42" name="wow_classe_race_id_classe_fkey">
+      <ObjectId>16998</ObjectId>
+      <StateNumber>944</StateNumber>
+      <ColNames>id_classe</ColNames>
+      <RefTableId>16777</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>wow_classe</RefTableName>
+      <RefKeyName>wow_classe_pkey</RefKeyName>
+      <RefColNames>uuid</RefColNames>
+    </foreign-key>
+    <trigger id="213" parent="42" name="typepersonnage_audit">
+      <ObjectId>17027</ObjectId>
+      <StateNumber>974</StateNumber>
+      <Turn>after-row</Turn>
+      <Events>IUD</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>17026</CallRoutineId>
+    </trigger>
+    <column id="214" parent="43" name="uuid">
+      <Position>1</Position>
+      <Comment>identifiant du type de profession dans world of warcraft</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>735</StateNumber>
+      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="215" parent="43" name="name">
+      <Position>2</Position>
+      <Comment>nom du type de profession</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>711</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="216" parent="43" name="pk_typeprofession_uuid">
+      <ObjectId>16613</ObjectId>
+      <StateNumber>735</StateNumber>
+      <ColNames>uuid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="217" parent="43" name="uk_typeprofession_name">
+      <ObjectId>16535</ObjectId>
+      <StateNumber>735</StateNumber>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="218" parent="43" name="pk_typeprofession_uuid">
+      <ObjectId>16614</ObjectId>
+      <StateNumber>735</StateNumber>
+      <ColNames>uuid</ColNames>
+      <UnderlyingIndexName>pk_typeprofession_uuid</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="219" parent="43" name="uk_typeprofession_name">
+      <ObjectId>16536</ObjectId>
+      <Comment>controle l&apos;unicite de nom pour les types de profession</Comment>
+      <StateNumber>711</StateNumber>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>uk_typeprofession_name</UnderlyingIndexName>
+    </key>
+    <trigger id="220" parent="43" name="typeprofession_audit">
+      <ObjectId>16665</ObjectId>
+      <StateNumber>766</StateNumber>
+      <Turn>after-row</Turn>
+      <Events>IUD</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16664</CallRoutineId>
+    </trigger>
+    <column id="221" parent="44" name="uuid">
+      <Position>1</Position>
+      <Comment>identifiant du type de race</Comment>
+      <DataType>uuid|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>874</StateNumber>
+      <DefaultExpression>uuid_generate_v4()</DefaultExpression>
+      <TypeId>2950</TypeId>
+    </column>
+    <column id="222" parent="44" name="name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>874</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="223" parent="44" name="wow_type_race_pkey">
+      <ObjectId>16729</ObjectId>
+      <StateNumber>874</StateNumber>
+      <ColNames>uuid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="224" parent="44" name="uk_typerace_name">
+      <ObjectId>16745</ObjectId>
+      <StateNumber>886</StateNumber>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="225" parent="44" name="wow_type_race_pkey">
+      <ObjectId>16730</ObjectId>
+      <StateNumber>874</StateNumber>
+      <ColNames>uuid</ColNames>
+      <UnderlyingIndexName>wow_type_race_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="226" parent="44" name="uk_typerace_name">
+      <ObjectId>16746</ObjectId>
+      <Comment>controle l unicite du nom pour les types de race</Comment>
+      <StateNumber>886</StateNumber>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>uk_typerace_name</UnderlyingIndexName>
+    </key>
+    <trigger id="227" parent="44" name="typerace_audit">
+      <ObjectId>16744</ObjectId>
+      <StateNumber>885</StateNumber>
+      <Turn>after-row</Turn>
+      <Events>IUD</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16731</CallRoutineId>
+    </trigger>
+    <argument id="228" parent="45">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0s</DataType>
+    </argument>
+    <argument id="229" parent="46">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0s</DataType>
+    </argument>
+    <argument id="230" parent="47">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0s</DataType>
+    </argument>
+    <argument id="231" parent="48">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0s</DataType>
+    </argument>
+    <argument id="232" parent="49">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0s</DataType>
+    </argument>
+    <argument id="233" parent="50">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0s</DataType>
+    </argument>
+    <argument id="234" parent="51">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0s</DataType>
+    </argument>
+    <argument id="235" parent="52">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0s</DataType>
+    </argument>
+    <argument id="236" parent="53" name="idtype">
+      <Position>1</Position>
+      <DataType>uuid|0s</DataType>
+    </argument>
+    <argument id="237" parent="53">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>boolean|0s</DataType>
+    </argument>
+    <argument id="238" parent="54">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0s</DataType>
+    </argument>
+    <argument id="239" parent="55">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>uuid|0s</DataType>
+    </argument>
+    <argument id="240" parent="56">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>uuid|0s</DataType>
+    </argument>
+    <argument id="241" parent="57" name="namespace">
+      <Position>1</Position>
+      <DataType>uuid|0s</DataType>
+    </argument>
+    <argument id="242" parent="57" name="name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="243" parent="57">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>uuid|0s</DataType>
+    </argument>
+    <argument id="244" parent="58">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>uuid|0s</DataType>
+    </argument>
+    <argument id="245" parent="59" name="namespace">
+      <Position>1</Position>
+      <DataType>uuid|0s</DataType>
+    </argument>
+    <argument id="246" parent="59" name="name">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="247" parent="59">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>uuid|0s</DataType>
+    </argument>
+    <argument id="248" parent="60">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>uuid|0s</DataType>
+    </argument>
+    <argument id="249" parent="61">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>uuid|0s</DataType>
+    </argument>
+    <argument id="250" parent="62">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>uuid|0s</DataType>
+    </argument>
+    <argument id="251" parent="63">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>uuid|0s</DataType>
+    </argument>
+    <argument id="252" parent="64">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>uuid|0s</DataType>
+    </argument>
+  </database-model>
+</dataSource>
