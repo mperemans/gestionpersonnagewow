@@ -1,4 +1,4 @@
-package spring.entity;
+package spring.entity.Audit;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

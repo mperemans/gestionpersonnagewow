@@ -1,4 +1,4 @@
-package spring.entity;
+package spring.entity.Audit;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -13,10 +13,10 @@ import java.sql.Timestamp;
 
 @Data
 @Entity
-@Table(name = "wow_audit_typepersonnage")
+@Table(name = "wow_audit_typerace")
 @AllArgsConstructor
 @NoArgsConstructor
-public class WowAuditTypepersonnage {
+public class WowAuditTyperace {
 
     @JsonProperty
     @Column(name = "id")
@@ -36,15 +36,11 @@ public class WowAuditTypepersonnage {
     private String idUser;
 
     @JsonProperty
-    @Column(name = "id_type_personnage")
-    private String idTypePersonnage;
+    @Column(name = "id_typerace")
+    private String idTyperace;
 
     @JsonProperty
-    @Column(name = "id_race")
-    private String idRace;
-
-    @JsonProperty
-    @Column(name = "id_classe")
-    private String idClasse;
+    @Column(name = "name")
+    private String name;
 
 }
